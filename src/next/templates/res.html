@@ -1,0 +1,22 @@
+{{ define "title" }}Binance{{ end }}
+
+{{ define "content" }}
+<table>
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>LastPrice</th>
+      <th>PriceChangePercent</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ range . }}
+      <tr>
+        <td>{{ .Symbol }}</td>
+        <td>{{ .LastPrice }}</td>
+        <td>{{ .PriceChangePercent }}</td>
+      </tr>
+    {{ end }}
+  </tbody>
+</table>
+{{ end }}
